@@ -62,3 +62,14 @@ body {
 .buttons .zero {
     grid-column: span 2;
 }
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .buttons button {
+        font-size: 1.2em;
+    }
+}
