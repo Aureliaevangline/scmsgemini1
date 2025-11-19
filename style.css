@@ -74,3 +74,27 @@ body {
         font-size: 1.2em;
     }
 }
+
+#history {
+    margin-top: 20px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#history h2 {
+    margin-top: 0;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}

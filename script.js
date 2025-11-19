@@ -8,11 +8,25 @@ function clearDisplay() {
 
 function calculateResult() {
     try {
-        const result = eval(document.getElementById('result').value);
+        const expression = document.getElementById('result').value;
+        const result = eval(expression);
         document.getElementById('result').value = result;
+        addToHistory(expression, result);
     } catch (error) {
         document.getElementById('result').value = 'Error';
     }
+}
+
+function addToHistory(expression, result) {
+    const historyList = document.getElementById('history-list');
+    const listItem = document.createElement('li');
+    listItem.textContent = `${expression} = ${result}`;
+    historyList.appendChild(listItem);
+}
+
+function clearHistory() {
+    const historyList = document.getElementById('history-list');
+    historyList.innerHTML = '';
 }
 
 function backspace() {
